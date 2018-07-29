@@ -5,4 +5,9 @@
     <string name="third_page_text">Grapes is a file sharing, uploading and downloading tool without centralized file storage</string>
     <string name="skip"><u>skip</u></string>
     <string name="grapes">Grapes</string>
+    <string name="title_activity_preview">PreviewActivity</string>
+
+    <string name="submit">submit</string>
+    <string name="nickname">Nickname</string>
+    <string name="title_activity_temp">TempActivity</string>
 </resources>

@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 class CustomPagerAdapter extends PagerAdapter {
 
     private List<PreviewObjects> previewObjectsList;
@@ -27,15 +25,13 @@ class CustomPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         View itemView = LayoutInflater.from(container.getContext())
-                .inflate(R.layout.preview_activity, container, false);
+                .inflate(R.layout.preview_content, container, false);
         PreviewObjects previewObjects = previewObjectsList.get(position);
         ImageView img = itemView.findViewById(R.id.image);
         TextView tvText = itemView.findViewById(R.id.tv_text);
         img.setImageResource(previewObjects.getImg());
         tvText.setText(previewObjects.getText());
         if (previewObjects.getLogoText() != null) {
-            img.setMaxWidth(150);
-
             TextView tvLogoText = itemView.findViewById(R.id.tv_logo_text);
             tvLogoText.setText("Grapes");
         }

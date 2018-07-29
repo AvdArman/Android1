@@ -5,6 +5,7 @@ public class PreviewObjects {
     private String text;
     private String logoText;
 
+
     public PreviewObjects(int img, String text, String logoText) {
         this.img = img;
         this.text = text;
