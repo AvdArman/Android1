@@ -57,8 +57,7 @@ public class LogIn extends AppCompatActivity {
                             nickname.setEnabled(false);
                             progress.setVisibility(VISIBLE);
                         } else {
-                            Toast.makeText(LogIn.this, "Invalid Nickname", Toast.LENGTH_SHORT).show();
-
+                            finish();
                         }
                     }
                 }

@@ -1,9 +1,6 @@
 package com.example.arman.grapes;
 
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -14,17 +11,11 @@ import android.widget.Toast;
 import java.util.LinkedList;
 import java.util.List;
 
+import static java.lang.Thread.sleep;
+
 public class PreviewActivity extends AppCompatActivity {
 
     private List<PreviewObjects> previewObjectsList = new LinkedList<>();
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Intent intent = new Intent(PreviewActivity.this, LogIn.class);
-        startActivity(intent);
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +24,19 @@ public class PreviewActivity extends AppCompatActivity {
         setObjectList();
         CustomPagerAdapter adapter = new CustomPagerAdapter(previewObjectsList);
         ViewPager viewPager = findViewById(R.id.view_pager);
+        try {
+            sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         viewPager.setAdapter(adapter);
         TabLayout tabLayout = findViewById(R.id.preview_tab_layout);
         tabLayout.setupWithViewPager(viewPager, true);
         Button btnSkip = findViewById(R.id.btn_skip);
         btnSkip.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
+                Toast.makeText(PreviewActivity.this, "aaaaaaaaaaaaa", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
