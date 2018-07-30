@@ -1,5 +1,6 @@
 package com.example.arman.grapes;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-//        TODO Astghik's code start
+//----------------------Tabbed Navigation *Start---------------------
 
         final ViewPager viewPager = findViewById(R.id.pager);
         MyFragmentsAdapter adapter = new MyFragmentsAdapter(getSupportFragmentManager());
@@ -53,7 +55,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_home);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_remote);
 
-//        TODO Astghik's code end
+//---------------------Tabbed Navigation *End
+//---------------------About Activity *Star----------------------
+
+
+//---------------------About Activity *End
+
+
     }
 
     private void showPreview() {
@@ -111,4 +119,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
 //
     }
+
+//---------------------About Activity *Start
+
+    /** Called when the user taps the About button */
+    public void openAboutPage(View view) {
+        Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
+    }
+
+
+//---------------------About Activity *End
 }
