@@ -1,6 +1,9 @@
 package com.example.arman.grapes;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -36,8 +39,7 @@ public class PreviewActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(PreviewActivity.this, "aaaaaaaaaaaaa", Toast.LENGTH_SHORT).show();
-                finish();
+                startActivity(new Intent(PreviewActivity.this, MainActivity.class));
             }
         });
     }

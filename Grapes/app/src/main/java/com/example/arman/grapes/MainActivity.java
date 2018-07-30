@@ -21,31 +21,12 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        showPreview();
-        Intent intent = new Intent(this, LogIn.class);
-        startActivity(intent);
-
-//        //asdfasdfasfasdf
-//        asdfasdfajsjdfhkhagsdjfkdsafasd
-//                asdfasdfajsjdfhkhagsdjfkdsafasdf
-//                asd
-//                        f
-//                        asd
-//                                f
-//                                a
-//                                        sdf
-//                                        as
-//                                                df
-//                                                as
-//                                                        df
-//                                                        asd
-//
-
 //---------------------------------------after login-----------------
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -80,14 +61,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    private void showPreview() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if (prefs.getBoolean("isFirstRun", true)) {
-            prefs.edit().putBoolean("isFirstRun", false).apply();
-            Intent intent = new Intent(MainActivity.this, PreviewActivity.class);
-            startActivity(intent);
-        }
-    }
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+//        if (prefs.getBoolean("isFirstRun", true)) {
+//            startActivity(new Intent(this, PreviewActivity.class));
+//            finish();
+//        }
+//        prefs.edit().putBoolean("isFirstRun", false).apply();
+//    }
 
     @Override
     public void onBackPressed() {
@@ -110,11 +93,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        //TODO ADD ABOUT
+
         if (id == R.id.action_active_nodes) {
+            //TODO ADD ACTIVE NODES ACTIVITY HERE
+
+            return true;
+        } else if (id == R.id.action_about) {
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
             return true;
         }
 
