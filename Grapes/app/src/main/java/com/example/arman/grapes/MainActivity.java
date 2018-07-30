@@ -28,6 +28,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent intent = new Intent(this, LogIn.class);
         startActivity(intent);
 
+//        //asdfasdfasfasdf
+//        asdfasdfajsjdfhkhagsdjfkdsafasd
+//                asdfasdfajsjdfhkhagsdjfkdsafasdf
+//                asd
+//                        f
+//                        asd
+//                                f
+//                                a
+//                                        sdf
+//                                        as
+//                                                df
+//                                                as
+//                                                        df
+//                                                        asd
+//
+
 //---------------------------------------after login-----------------
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
