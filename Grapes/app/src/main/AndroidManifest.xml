@@ -22,15 +22,12 @@
             android:name=".PreviewActivity"
             android:label="@string/title_activity_preview"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".LogIn"
             android:label="@string/title_activity_preview"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>
