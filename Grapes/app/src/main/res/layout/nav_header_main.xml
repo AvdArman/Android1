@@ -3,16 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/side_nav_bar"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPurple"
     android:gravity="bottom"
+    android:padding="@dimen/submit_btn_margin_bottom"
     android:orientation="vertical"
+    android:backgroundTint="@color/colorPurple"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <TextView
+        android:id="@+id/name_circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/nav_header_desc"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:background="@drawable/ic_bluecircle"
+        android:layout_gravity="center_vertical|left"
+        android:text="A"
+        android:textSize="50sp"
+        android:gravity="center"/>
+
 
 </LinearLayout>

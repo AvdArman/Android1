@@ -10,11 +10,11 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="active_dot_size">5dp</dimen>
     <dimen name="inactive_dot_size">3dp</dimen>
-
-    <dimen name="var150">150dp</dimen>
-    <dimen name="var4">40dp</dimen>
-    <dimen name="var100">100dp</dimen>
-
-    <dimen name="view_pager_padding_top">10dp</dimen>
-
+    <dimen name="submit_btn_width">150dp</dimen>
+    <dimen name="submit_btn_margin_bottom">40dp</dimen>
+    <dimen name="login_text_margin_bottom">100dp</dimen>
+    <dimen name="view_pager_padding_top">10dp</dimen>\
+    <dimen name="margin_left">20dp</dimen>
+    <dimen name="text_size_25">25sp</dimen>
+    <dimen name="layout_height">80dp</dimen>
 </resources>

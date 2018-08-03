@@ -7,7 +7,7 @@
     android:background="@color/colorThistle"
     android:orientation="vertical"
     android:weightSum="1"
-    tools:context=".MainActivity">
+    tools:context="com.instigatemobile.grapes.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -66,6 +66,5 @@
         layout="@layout/content_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
 
 </LinearLayout>
